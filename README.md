@@ -21,15 +21,19 @@ METHODOLOGY:
 available dataset that was released as a part of TuSimple Lane Detection Challenge. It
 contains 3626 videos of 1 second each. Each of these video clips contain 20 frames, of
 which the last frame is annotated.
+
 (2) DATASET VISUALISATION: Data can be visualized using matplotlib.pyplot library. Cv2
 library will be used to view the images. To visualize the lanes, we will use json library.
+
 (3) Generating Labelled Images : We have to generate label images for json files. They
 can be generated using OpenCV by drawing lines passing through the points in JSON file.
 OpenCV’s polylines method can be used here. Generate a mask image using the same.
+
 (4) BUILD AND TRAIN MODEL: We will use a pre-trained model PINet as discussed above
 to re-train the model. The network will contain several hourglass modules. The
 Hyperparameters will be specified which includes learning rate, number of epochs, loss
 function,resize rato to name a few.
+
 (5)EVALUATION: The trained model will be evaluated on the test data. I shall implement
 this using pytorch library. Output two-channeled images from the model will be converted
 into three-channeled images. F1 measure will be used to evaluae the performance of the
